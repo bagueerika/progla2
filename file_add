@@ -1,0 +1,23 @@
+#include <stdio.h>
+main(){
+    FILE *myFile;
+    myFile = fopen("sample.txt", "r");
+
+    //read file into array
+    int i;
+    int numberArray[5];
+    int sum =0;
+
+    for (i = 0; i < 5; i++){
+        fscanf(myFile, "%1d", &numberArray[i]);
+    }
+
+    for (i = 0; i < 5; i++){
+        printf("Number is: %d\n\n", numberArray[i]);
+    }
+    
+    for(i = 0; i < 5; i++){
+    	sum += numberArray[i]; 
+    	printf("The sum of all numbers is: %d\n\n", sum);
+	  }
+}
